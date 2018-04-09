@@ -10,15 +10,15 @@ function MyApp:onCreate()
 	local listener2 = cc.EventListenerCustom:create("APP_EXIT_BACKGROUND", handler(self,self.applicationWillEnterForeground))
 	cc.Director:getInstance():getEventDispatcher():addEventListenerWithFixedPriority(listener2, 1)
 	
-    Socket_TCP = require("network.client")
+    -- Socket_TCP = require("network.client")
 
-    if GameTCP == nil then
-		GameTCP = Socket_TCP.create()
-    end
-	GameTCP:addEventListener(Socket_TCP.EVENT_CONNECTED,self,self.onServerState)
-    GameTCP:addEventListener(Socket_TCP.EVENT_CLOSED,self,self.onServerState)
-    GameTCP:addEventListener(Socket_TCP.EVENT_CONNECT_FAILURE,self,self.onServerState)	
-	GameTCP:connect(SERVER_IP,SERVER_PORT)
+    -- if GameTCP == nil then
+		-- GameTCP = Socket_TCP.create()
+    -- end
+	-- GameTCP:addEventListener(Socket_TCP.EVENT_CONNECTED,self,self.onServerState)
+    -- GameTCP:addEventListener(Socket_TCP.EVENT_CLOSED,self,self.onServerState)
+    -- GameTCP:addEventListener(Socket_TCP.EVENT_CONNECT_FAILURE,self,self.onServerState)	
+	-- GameTCP:connect(SERVER_IP,SERVER_PORT)
 end
 
 -- 服务器链接状态

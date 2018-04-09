@@ -6,6 +6,7 @@ require "config"
 require "cocos.init"
 require "app.common.ServerConfig"
 require "app.util.init"
+require("debugtool.init")
 
 local function main()
 	--初始化日志文件
